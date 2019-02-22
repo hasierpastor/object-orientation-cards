@@ -1,8 +1,11 @@
 class DeckCards {
   constructor() {
-    this.cards = [];
-    this.suit = ['Hearts', 'Spades', 'Clubs', 'Diamonds'];
-    this.values = [
+    this.deck = [];
+  }
+
+  createDeck() {
+    const suits = ['Hearts', 'Spades', 'Clubs', 'Diamonds'];
+    const values = [
       'Ace',
       '2',
       '3',
@@ -16,9 +19,11 @@ class DeckCards {
       'Queen',
       'King'
     ];
-  }
 
-  createDeck() {
-    this.deck = [];
+    for (let suit in suits) {
+      for (let value in values) {
+        this.deck.push({ suit: value });
+      }
+    }
   }
 }
