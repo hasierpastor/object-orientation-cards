@@ -1,3 +1,5 @@
+//Class that represents a deck of cards - deck is represented by array of objects
+//When new instance is create a new deck of shuffled cards will be created
 class DeckCards {
   constructor() {
     this.deck = [];
@@ -5,6 +7,7 @@ class DeckCards {
     this.shuffle();
   }
 
+  //method to create deck of cards
   createDeck() {
     const suits = ['Hearts', 'Spades', 'Clubs', 'Diamonds'];
     const values = [
@@ -30,6 +33,7 @@ class DeckCards {
     }
   }
 
+  //method to shuffle deck of cards
   shuffle() {
     let { deck } = this;
     //implementation of Fisher Yates Shuffle from https://bost.ocks.org/mike/shuffle/
@@ -42,6 +46,7 @@ class DeckCards {
     return deck;
   }
 
+  //method to deal card
   dealCard() {
     let card = this.deck.pop();
     return card;
