@@ -41,7 +41,13 @@ class DeckCards {
     }
     return deck;
   }
+
+  dealCard() {
+    let card = this.deck.pop();
+    return card;
+  }
 }
 
 let testdeck = new DeckCards();
 console.log(testdeck);
+console.log(testdeck.dealCard());
